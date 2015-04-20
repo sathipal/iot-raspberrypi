@@ -136,9 +136,16 @@ Clone the project into your local Raspberry Pi environment
 	pi@raspberrypi ~ $ git clone https://github.com/ibm-messaging/iot-raspberrypi.git
 	pi@raspberrypi ~ $ cd iot-raspberrypi/samples/c/
 ```
-Make the necessary changes to the c source files and finally build the .deb file, the installer for iot-raspberrypi 
+Make the necessary changes to the c source files and finally build the .deb file, the installer for iot-raspberrypi
 ```
-	pi@raspberrypi ~ debuild -b
+	pi@raspberrypi ~ $ debuild -b
+```
+
+If 'debuild' and ssl lib are not found on your Raspberry Pi, install them and re-build the .deb file
+```
+	pi@raspberrypi ~ $ sudo apt-get install dpkg-dev build-essential devscripts
+        pi@raspberrypi ~ $ sudo apt-get install libssl-dev
+	pi@raspberrypi ~ $ debuild -b
 ```
 
 Now the .deb file will be generated on the directory one level up.
