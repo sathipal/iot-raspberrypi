@@ -144,7 +144,7 @@ Make the necessary changes to the c source files and finally build the .deb file
 If 'debuild' and ssl lib are not found on your Raspberry Pi, install them and re-build the .deb file
 ```
 	pi@raspberrypi ~ $ sudo apt-get install dpkg-dev build-essential devscripts
-        pi@raspberrypi ~ $ sudo apt-get install libssl-dev
+	pi@raspberrypi ~ $ sudo apt-get install libssl-dev
 	pi@raspberrypi ~ $ debuild -b
 ```
 
